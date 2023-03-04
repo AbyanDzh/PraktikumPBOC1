@@ -5,19 +5,22 @@
  *             
  */
 
- public class operasiTitik {
+public class operasiTitik {
+        // Di private agar hanya bisa diakses di operasiTitik.java
         private void refleksiSumbuX(Titik titik){
             titik.setOrdinat(-titik.getOrdinat());
         }
         private void refleksiSumbuY(Titik titik){
             titik.setAbsis(-titik.getAbsis());
         }
-        public void refleksiX(Titik titik){
+        // Perantara untuk menjalankan fungsi refleksi ke kelas luar
+        public Titik refleksiX(Titik titik){
             refleksiSumbuX(titik);
+            return titik;
         }
-        public void refleksiY(Titik titik){
+        public Titik refleksiY(Titik titik){
             refleksiSumbuY(titik);
+            return titik;
         }
     }
-    
 
